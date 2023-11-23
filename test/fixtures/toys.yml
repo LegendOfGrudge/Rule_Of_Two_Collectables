@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  full_name: MyString
+  description: MyText
+  quantity: 1
+  price: MyString
+  decimal: MyString
+  toy_type: one
+  collection: one
+
+two:
+  name: MyString
+  full_name: MyString
+  description: MyText
+  quantity: 1
+  price: MyString
+  decimal: MyString
+  toy_type: two
+  collection: two
