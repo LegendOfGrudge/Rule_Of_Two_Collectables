@@ -1,0 +1,29 @@
+<h1>BIG DEALS</h1>
+
+<% @expensiveToys.each do |toy| %>
+  <div class="line-item">
+    <img src="<%= toy.image %>" alt="<%= toy.name %>">
+    <div class="line-item-details">
+      <div class="name"><%= toy.name %></div>
+      <div class="description"><%= toy.description %></div>
+      <div class="details">Price: <div class="price">$<%= toy.price %></div></div>
+      <div class="details">Quantity: <div class="price"><%= toy.quantity %></div></div>
+    </div>
+  </div>
+<% end %>
+
+<br/>
+
+<h1>LIMITED STOCK</h1>
+
+<% @lowQuantityToys.each do |toy| %>
+  <div class="line-item">
+    <img src="<%= toy.image %>" alt="<%= toy.name %>">
+    <div class="line-item-details">
+      <div class="name"><%= toy.name %></div>
+      <div class="description"><%= toy.description %></div>
+      <div class="details">Price: <div class="price">$<%= toy.price %></div></div>
+      <div class="details">Quantity: <div class="price"><%= toy.quantity %></div></div>
+    </div>
+  </div>
+<% end %>

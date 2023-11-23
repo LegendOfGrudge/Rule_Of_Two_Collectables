@@ -13,3 +13,112 @@
  *= require_tree .
  *= require_self
  */
+
+ .line-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 25px;
+  background-color: rgb(162, 161, 161);
+}
+
+.line-item img {
+  width: 100px; /* Adjust the width as needed */
+  margin-right: 15px;
+  background-color: #ccc;
+}
+
+.line-item-details {
+  flex: 1;
+}
+
+.name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.description {
+  color: #555;
+}
+
+.price {
+  color: #e44d26; /* Adjust the color as needed */
+  font-weight: bold;
+}
+
+.details {
+  display: flex;
+}
+
+/* Navigation Bar Styles */
+.nav_bar {
+  background-color: maroon;
+  padding: 10px 0;
+}
+
+.nav_bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_bar li {
+  display: inline;
+  margin-right: 20px;
+
+}
+
+.nav_bar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+}
+
+ .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar {
+  background-color: maroon; /* Background color for the navbar */
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pushes elements to both ends of the navbar */
+}
+
+.nav-list li {
+  margin: 0 10px; /* Adjust margins as needed */
+  color: #fff; /* Text color for navbar items */
+}
+
+/* Style the search input and button */
+.nav-list li input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 5px; /* Adjust margin as needed */
+}
+
+.nav-list li input[type="submit"] {
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.nav-search {
+  width: 60vw;
+  text-align: right;
+}

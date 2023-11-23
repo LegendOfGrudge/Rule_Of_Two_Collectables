@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RuleOfTwoCollectables</title>
+    <title>Rule Of Two Collectables</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,24 @@
   </head>
 
   <body>
+    <div class="nav_bar">
+      <nav>
+
+      <ul class="nav-list">
+        <li><img src="assets/images/Logo.png"></li>
+        <li><%= link_to 'Home', root_path %></li>
+        <li>
+          <div class="nav-search">
+            <%= form_tag search_path, method: :get do %>
+              <%= text_field_tag :query, params[:query] %>
+              <%= submit_tag "Search" %>
+            <% end %>
+          </div>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
     <%= yield %>
   </body>
 </html>

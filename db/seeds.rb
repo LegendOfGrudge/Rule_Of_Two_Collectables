@@ -35,6 +35,7 @@ toys.each do |toy|
       description: toy['description'],
       quantity: Faker::Number.number(digits: 2),
       price: price[3..-1],
+      image: "https://www.actionfigure411.com#{toy['image-src']}",
       collection:,
       toy_type:
     )
@@ -62,6 +63,7 @@ toys.each do |toy|
       description: toy['description'],
       quantity: Faker::Number.number(digits: 2),
       price: price[3..-1],
+      image: "https://www.actionfigure411.com#{toy['image-src']}",
       collection:,
       toy_type:
     )
@@ -87,6 +89,7 @@ toys.each do |toy|
       description: toy['description'],
       quantity: Faker::Number.number(digits: 2),
       price: price[3..-1],
+      image: "https://www.actionfigure411.com#{toy['image-src']}",
       collection:,
       toy_type:
     )
@@ -114,6 +117,7 @@ toys.each do |toy|
       description: toy['description'],
       quantity: Faker::Number.number(digits: 2),
       price: price[3..-1],
+      image: "https://www.actionfigure411.com#{toy['image-src']}",
       collection:,
       toy_type:
     )
@@ -141,6 +145,7 @@ toys.each do |toy|
       description: toy['description'],
       quantity: Faker::Number.number(digits: 2),
       price: price[3..-1],
+      image: "https://www.actionfigure411.com#{toy['image-src']}",
       collection:,
       toy_type:
     )
@@ -166,6 +171,7 @@ toys.each do |toy|
       description: toy['description'],
       quantity: Faker::Number.number(digits: 2),
       price: price[3..-1],
+      image: "https://www.actionfigure411.com#{toy['image-src']}",
       collection:,
       toy_type:
     )
