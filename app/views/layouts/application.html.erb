@@ -15,16 +15,13 @@
       <nav>
 
       <ul class="nav-list">
-        <li><img src="assets/images/Logo.png"></li>
+        <li><%= image_tag "Logo.png" %></li>
         <li><%= link_to 'Home', root_path %></li>
-        <li>
-          <div class="nav-search">
-            <%= form_tag search_path, method: :get do %>
-              <%= text_field_tag :query, params[:query] %>
-              <%= submit_tag "Search" %>
-            <% end %>
-          </div>
-        </li>
+        <li>About</li>
+        <% @brands.each do |brand| %>
+          <li><%= brand.name %></li>
+        <% end %>
+        <li></li>
       </ul>
 
     </nav>

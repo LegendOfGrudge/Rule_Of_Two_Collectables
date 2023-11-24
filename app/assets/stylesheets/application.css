@@ -14,6 +14,11 @@
  *= require_self
  */
 
+ body {
+  margin: 0;
+  padding: 0;
+ }
+
  .line-item {
   display: flex;
   align-items: center;
@@ -54,7 +59,8 @@
 /* Navigation Bar Styles */
 .nav_bar {
   background-color: maroon;
-  padding: 10px 0;
+  margin: 0;
+  padding: 0;
 }
 
 .nav_bar ul {
@@ -66,7 +72,6 @@
 .nav_bar li {
   display: inline;
   margin-right: 20px;
-
 }
 
 .nav_bar a {
@@ -75,18 +80,6 @@
   font-weight: bold;
   text-align: center;
   padding: 8px;
-}
-
- .container {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-bar {
-  background-color: maroon; /* Background color for the navbar */
-  padding: 10px; /* Adjust padding as needed */
 }
 
 .nav-list {
@@ -98,7 +91,7 @@
 }
 
 .nav-list li {
-  margin: 0 10px; /* Adjust margins as needed */
+  margin: 0 5px; /* Adjust margins as needed */
   color: #fff; /* Text color for navbar items */
 }
 

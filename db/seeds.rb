@@ -26,21 +26,55 @@ csv_data = File.read(csv_file)
 toys = CSV.parse(csv_data, headers: true)
 
 toys.each do |toy|
-  if (toy['price'] != "null")
-    price = toy['price']
+  if (toy['buy_price'].include? "C$")
+    price = toy['buy_price']
 
     Toy.create(
       name: toy['figure_link'],
       full_name: toy['name'],
       description: toy['description'],
       quantity: Faker::Number.number(digits: 2),
-      price: price[3..-1],
+      price: price[2..-1],
       image: "https://www.actionfigure411.com#{toy['image-src']}",
       collection:,
       toy_type:
     )
 
     puts "#{toy['figure_link']}"
+  else
+    if (toy['auction_price'].include? "C$")
+      price = toy['auction_price']
+
+      Toy.create(
+        name: toy['figure_link'],
+        full_name: toy['name'],
+        description: toy['description'],
+        quantity: Faker::Number.number(digits: 2),
+        price: price[2..-1],
+        image: "https://www.actionfigure411.com#{toy['image-src']}",
+        collection:,
+        toy_type:
+      )
+
+      puts "#{toy['figure_link']}"
+    else
+      if (toy['retail_price'].include? "C$")
+        price = toy['retail_price']
+
+        Toy.create(
+          name: toy['figure_link'],
+          full_name: toy['name'],
+          description: toy['description'],
+          quantity: Faker::Number.number(digits: 2),
+          price: price[2..-1],
+          image: "https://www.actionfigure411.com#{toy['image-src']}",
+          collection:,
+          toy_type:
+        )
+
+        puts "#{toy['figure_link']}"
+      end
+    end
   end
 end
 
@@ -54,21 +88,55 @@ csv_data = File.read(csv_file)
 toys = CSV.parse(csv_data, headers: true)
 
 toys.each do |toy|
-  if (toy['price'] != "null")
-    price = toy['price']
+  if (toy['buy_price'].include? "C$")
+    price = toy['buy_price']
 
     Toy.create(
       name: toy['figure_link'],
       full_name: toy['name'],
       description: toy['description'],
       quantity: Faker::Number.number(digits: 2),
-      price: price[3..-1],
+      price: price[2..-1],
       image: "https://www.actionfigure411.com#{toy['image-src']}",
       collection:,
       toy_type:
     )
 
     puts "#{toy['figure_link']}"
+  else
+    if (toy['auction_price'].include? "C$")
+      price = toy['auction_price']
+
+      Toy.create(
+        name: toy['figure_link'],
+        full_name: toy['name'],
+        description: toy['description'],
+        quantity: Faker::Number.number(digits: 2),
+        price: price[2..-1],
+        image: "https://www.actionfigure411.com#{toy['image-src']}",
+        collection:,
+        toy_type:
+      )
+
+      puts "#{toy['figure_link']}"
+    else
+      if (toy['retail_price'].include? "C$")
+        price = toy['retail_price']
+
+        Toy.create(
+          name: toy['figure_link'],
+          full_name: toy['name'],
+          description: toy['description'],
+          quantity: Faker::Number.number(digits: 2),
+          price: price[2..-1],
+          image: "https://www.actionfigure411.com#{toy['image-src']}",
+          collection:,
+          toy_type:
+        )
+
+        puts "#{toy['figure_link']}"
+      end
+    end
   end
 end
 
@@ -80,21 +148,55 @@ csv_data = File.read(csv_file)
 toys = CSV.parse(csv_data, headers: true)
 
 toys.each do |toy|
-  if (toy['price'] != "null")
-    price = toy['price']
+  if (toy['buy_price'].include? "C$")
+    price = toy['buy_price']
 
     Toy.create(
       name: toy['figure_link'],
       full_name: toy['name'],
       description: toy['description'],
       quantity: Faker::Number.number(digits: 2),
-      price: price[3..-1],
+      price: price[2..-1],
       image: "https://www.actionfigure411.com#{toy['image-src']}",
       collection:,
       toy_type:
     )
 
     puts "#{toy['figure_link']}"
+  else
+    if (toy['auction_price'].include? "C$")
+      price = toy['auction_price']
+
+      Toy.create(
+        name: toy['figure_link'],
+        full_name: toy['name'],
+        description: toy['description'],
+        quantity: Faker::Number.number(digits: 2),
+        price: price[2..-1],
+        image: "https://www.actionfigure411.com#{toy['image-src']}",
+        collection:,
+        toy_type:
+      )
+
+      puts "#{toy['figure_link']}"
+    else
+      if (toy['retail_price'].include? "C$")
+        price = toy['retail_price']
+
+        Toy.create(
+          name: toy['figure_link'],
+          full_name: toy['name'],
+          description: toy['description'],
+          quantity: Faker::Number.number(digits: 2),
+          price: price[2..-1],
+          image: "https://www.actionfigure411.com#{toy['image-src']}",
+          collection:,
+          toy_type:
+        )
+
+        puts "#{toy['figure_link']}"
+      end
+    end
   end
 end
 
@@ -108,21 +210,55 @@ csv_data = File.read(csv_file)
 toys = CSV.parse(csv_data, headers: true)
 
 toys.each do |toy|
-  if (toy['price'] != "null")
-    price = toy['price']
+  if (toy['buy_price'].include? "C$")
+    price = toy['buy_price']
 
     Toy.create(
       name: toy['figure_link'],
       full_name: toy['name'],
       description: toy['description'],
       quantity: Faker::Number.number(digits: 2),
-      price: price[3..-1],
+      price: price[2..-1],
       image: "https://www.actionfigure411.com#{toy['image-src']}",
       collection:,
       toy_type:
     )
 
     puts "#{toy['figure_link']}"
+  else
+    if (toy['auction_price'].include? "C$")
+      price = toy['auction_price']
+
+      Toy.create(
+        name: toy['figure_link'],
+        full_name: toy['name'],
+        description: toy['description'],
+        quantity: Faker::Number.number(digits: 2),
+        price: price[2..-1],
+        image: "https://www.actionfigure411.com#{toy['image-src']}",
+        collection:,
+        toy_type:
+      )
+
+      puts "#{toy['figure_link']}"
+    else
+      if (toy['retail_price'].include? "C$")
+        price = toy['retail_price']
+
+        Toy.create(
+          name: toy['figure_link'],
+          full_name: toy['name'],
+          description: toy['description'],
+          quantity: Faker::Number.number(digits: 2),
+          price: price[2..-1],
+          image: "https://www.actionfigure411.com#{toy['image-src']}",
+          collection:,
+          toy_type:
+        )
+
+        puts "#{toy['figure_link']}"
+      end
+    end
   end
 end
 
@@ -136,21 +272,55 @@ csv_data = File.read(csv_file)
 toys = CSV.parse(csv_data, headers: true)
 
 toys.each do |toy|
-  if (toy['price'] != "null")
-    price = toy['price']
+  if (toy['buy_price'].include? "C$")
+    price = toy['buy_price']
 
     Toy.create(
       name: toy['figure_link'],
       full_name: toy['name'],
       description: toy['description'],
       quantity: Faker::Number.number(digits: 2),
-      price: price[3..-1],
+      price: price[2..-1],
       image: "https://www.actionfigure411.com#{toy['image-src']}",
       collection:,
       toy_type:
     )
 
     puts "#{toy['figure_link']}"
+  else
+    if (toy['auction_price'].include? "C$")
+      price = toy['auction_price']
+
+      Toy.create(
+        name: toy['figure_link'],
+        full_name: toy['name'],
+        description: toy['description'],
+        quantity: Faker::Number.number(digits: 2),
+        price: price[2..-1],
+        image: "https://www.actionfigure411.com#{toy['image-src']}",
+        collection:,
+        toy_type:
+      )
+
+      puts "#{toy['figure_link']}"
+    else
+      if (toy['retail_price'].include? "C$")
+        price = toy['retail_price']
+
+        Toy.create(
+          name: toy['figure_link'],
+          full_name: toy['name'],
+          description: toy['description'],
+          quantity: Faker::Number.number(digits: 2),
+          price: price[2..-1],
+          image: "https://www.actionfigure411.com#{toy['image-src']}",
+          collection:,
+          toy_type:
+        )
+
+        puts "#{toy['figure_link']}"
+      end
+    end
   end
 end
 
@@ -162,21 +332,55 @@ csv_data = File.read(csv_file)
 toys = CSV.parse(csv_data, headers: true)
 
 toys.each do |toy|
-  if (toy['price'] != "null")
-    price = toy['price']
+  if (toy['buy_price'].include? "C$")
+    price = toy['buy_price']
 
     Toy.create(
       name: toy['figure_link'],
       full_name: toy['name'],
       description: toy['description'],
       quantity: Faker::Number.number(digits: 2),
-      price: price[3..-1],
+      price: price[2..-1],
       image: "https://www.actionfigure411.com#{toy['image-src']}",
       collection:,
       toy_type:
     )
 
     puts "#{toy['figure_link']}"
+  else
+    if (toy['auction_price'].include? "C$")
+      price = toy['auction_price']
+
+      Toy.create(
+        name: toy['figure_link'],
+        full_name: toy['name'],
+        description: toy['description'],
+        quantity: Faker::Number.number(digits: 2),
+        price: price[2..-1],
+        image: "https://www.actionfigure411.com#{toy['image-src']}",
+        collection:,
+        toy_type:
+      )
+
+      puts "#{toy['figure_link']}"
+    else
+      if (toy['retail_price'].include? "C$")
+        price = toy['retail_price']
+
+        Toy.create(
+          name: toy['figure_link'],
+          full_name: toy['name'],
+          description: toy['description'],
+          quantity: Faker::Number.number(digits: 2),
+          price: price[2..-1],
+          image: "https://www.actionfigure411.com#{toy['image-src']}",
+          collection:,
+          toy_type:
+        )
+
+        puts "#{toy['figure_link']}"
+      end
+    end
   end
 end
 
