@@ -157,3 +157,29 @@
   text-align: center;
   padding: 8px;
 }
+
+
+
+.toy-images-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.collection-toy {
+  text-align: center;
+  padding: 10px;
+  width: calc(33.33% - 20px); /* Adjust the width and padding as needed */
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc; /* Optional: Adding a border for visual separation */
+  border-radius: 5px; /* Optional: Rounded corners for aesthetics */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a slight elevation effect */
+}
+
+.collection-toy h3 {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
