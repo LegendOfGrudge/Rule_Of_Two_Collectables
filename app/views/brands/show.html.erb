@@ -1,0 +1,7 @@
+<h1><%= @brand.name %></h1>
+<br/>
+<ul class="collection-list">
+  <% @collections.each do |collection| %>
+    <li><%= collection.name %></li>
+  <% end %>
+</ul>

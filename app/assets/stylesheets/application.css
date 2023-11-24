@@ -115,3 +115,45 @@
   width: 60vw;
   text-align: right;
 }
+
+.brand-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.brand-list li {
+  background: linear-gradient(to right, black, red);
+  color: white; /* Set text color to contrast with the gradient */
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+}
+
+.brand-list a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+}
+
+.collection-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.collection-list li {
+  background: linear-gradient(to right, black, orange);
+  color: white; /* Set text color to contrast with the gradient */
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+}
+
+.collection-list a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+}

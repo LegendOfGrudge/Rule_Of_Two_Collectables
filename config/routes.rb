@@ -3,5 +3,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
-  get 'search', to: 'search#search'
+
+  get '/home', to: 'home#index'
+  get '/about', to: 'about#index'
+  get '/search', to: 'search#search'
+
+  resources :brands
 end

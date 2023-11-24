@@ -17,9 +17,9 @@
       <ul class="nav-list">
         <li><%= image_tag "Logo.png" %></li>
         <li><%= link_to 'Home', root_path %></li>
-        <li>About</li>
+        <li><%= link_to 'About', about_path %></li>
         <% @brands.each do |brand| %>
-          <li><%= brand.name %></li>
+          <li><%= link_to brand.name, brand %></li>
         <% end %>
         <li></li>
       </ul>
