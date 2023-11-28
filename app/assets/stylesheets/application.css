@@ -129,6 +129,15 @@
   text-align: right;
 }
 
+.nav-search form select {
+  margin-right: 5px;
+  padding: 5px;
+  color: black;
+  background-color: rgb(120, 120, 120);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
 .nav-search form input[type="text"] {
   width: 20vw;
 }

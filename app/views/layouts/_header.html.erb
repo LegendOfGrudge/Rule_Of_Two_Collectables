@@ -5,6 +5,7 @@
       <li>
         <div class="nav-search">
           <%= form_tag search_path, method: :get do %>
+            <%= collection_select :collection, :id, @collections, :id, :name, { include_blank: 'All' }, { class: 'form-control' } %>
             <%= text_field_tag :query, params[:query] %>
             <%= submit_tag "Search" %>
           <% end %>
