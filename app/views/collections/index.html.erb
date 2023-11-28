@@ -1,0 +1,7 @@
+<h1>Collections</h1>
+<br/>
+<ul class="collection-list">
+  <% @collections.each do |collection| %>
+    <li><%= link_to collection.name, collection %></li>
+  <% end %>
+</ul>

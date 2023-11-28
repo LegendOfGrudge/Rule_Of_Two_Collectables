@@ -45,6 +45,9 @@ gem "bootsnap", require: false
 # Faker for abstract data
 gem 'faker'
 
+# Kaminari for pagination
+gem 'kaminari'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

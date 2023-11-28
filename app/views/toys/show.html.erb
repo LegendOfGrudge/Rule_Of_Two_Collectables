@@ -1,0 +1,32 @@
+<h1 class="headline"><%= @toy.name %></h1>
+<% if @toy.quantity > 95 %>
+  <div class="product-container">
+    <img class="product-image" src="<%= @toy.image %>" alt="<%= @toy.name %>">
+    <div class="product-title"><%= @toy.full_name %></div>
+    <div class="product-details">
+      <p>Type: <span class="product-detail-emphasis"><%= @toy.toy_type.type_name %></span> Collection: <span class="product-detail-emphasis"><%= @toy.collection.name %></span></p>
+    </div>
+    <div class="product-description"><%= @toy.description %></div>
+    <div>
+      <p>Reqular Price: $<%= sprintf('%.2f', @toy.price) %> Sale Price: <span class="price">$<%= sprintf('%.2f', @toy.price * 0.9) %></span></p>
+    </div>
+    <label for="quantity">Quantity:</label>
+    <input class="quantity-input" type="number" id="quantity" name="quantity" value="1" min="1" max="<%= @toy.quantity %>">
+    <button class="add-to-cart-btn">Add to Cart</button>
+  </div>
+<% else %>
+  <div class="product-container">
+    <img class="product-image" src="<%= @toy.image %>" alt="<%= @toy.name %>">
+    <div class="product-title"><%= @toy.full_name %></div>
+    <div class="product-details">
+      <p>Type: <span class="product-detail-emphasis"><%= @toy.toy_type.type_name %></span> Collection: <span class="product-detail-emphasis"><%= @toy.collection.name %></span></p>
+    </div>
+    <div class="product-description"><%= @toy.description %></div>
+    <div>
+      <p>Price: <span class="price">$<%= sprintf('%.2f', @toy.price) %></span></p>
+    </div>
+    <label for="quantity">Quantity:</label>
+    <input class="quantity-input" type="number" id="quantity" name="quantity" value="1" min="1" max="<%= @toy.quantity %>">
+    <button class="add-to-cart-btn">Add to Cart</button>
+  </div>
+<% end %>
