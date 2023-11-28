@@ -5,6 +5,6 @@ class CollectionsController < ApplicationController
 
   def show
     @collection = Collection.find(params[:id])
-    @toys = Toy.where(:collection_id => params[:id]).order("name ASC")
+    @toys = Toy.where(:collection_id => params[:id]).order("quantity DESC")
   end
 end
