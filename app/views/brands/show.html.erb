@@ -1,7 +1,14 @@
-<h1><%= @brand.name %></h1>
-<br/>
-<ul class="collection-list">
-  <% @collections.each do |collection| %>
-    <li><%= collection.name %></li>
-  <% end %>
-</ul>
+<% @collections.each do |collection| %>
+  <h2>Collection: <%= collection.name %></h2>
+  <div class="collection-top-toys">
+    <% top_toys_collection = @top_toys.select { |toy| toy.collection_id == collection.id } %>
+    <div class="horizontal-scroll-container">
+      <% top_toys_collection.each do |toy| %>
+        <div class="toy-item-container">
+          <%= image_tag toy.image, alt: "#{toy.name} Image", class: "toy-image" %>
+
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
