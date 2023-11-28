@@ -21,9 +21,20 @@
  }
 
  .headline {
+  margin-bottom: 0;
   text-align: center;
   color: #fff;
   background: linear-gradient(to bottom, rgb(167, 109, 0), maroon);
+ }
+
+ .headline-description {
+  margin-top: 0;
+  text-align: center;
+  color: black;
+  background-color: rgb(120, 120, 120);
+  border-bottom: 1px solid #ccc;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
  }
 
  .line-item {
@@ -193,12 +204,13 @@
   padding: 0;
 }
 
-.collection-list li {
+.collection-list h2 {
   background: linear-gradient(to right, black, rgb(167, 109, 0));
-  color: white; /* Set text color to contrast with the gradient */
+  color: maroon; /* Set text color to contrast with the gradient */
   padding: 10px;
-  margin: 5px;
-  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  margin-bottom: 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .collection-list a {
@@ -276,6 +288,10 @@
 /* Updated CSS */
 .collection-top-toys {
   margin-bottom: 20px; /* Adjust margin as needed */
+  background-color: rgb(120, 120, 120);
+  border-bottom: 1px solid #ccc;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .horizontal-scroll-container {
@@ -287,7 +303,7 @@
 
 .toy-item-container {
   flex: 0 0 auto;
-  margin-right: 10px; /* Adjust margin as needed */
+  margin: 0 auto; /* Adjust margin as needed */
 }
 
 .toy-image {
@@ -295,3 +311,80 @@
   height: auto;
 }
 
+.product-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: rgb(120, 120, 120);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.product-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-details {
+  border-top: 1px solid rgb(60, 60, 60);
+  border-bottom: 1px solid rgb(60, 60, 60);
+  color: rgb(60, 60, 60);
+}
+
+.product-detail-emphasis {
+  color: black;
+}
+
+.product-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.quantity-input {
+  width: 50px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.add-to-cart-btn {
+  background-color: #4caf50; /* Green color */
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #45a049; /* Darker green color on hover */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+footer a {
+  color: maroon;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

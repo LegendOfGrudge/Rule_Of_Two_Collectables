@@ -1,4 +1,7 @@
-<% @collections.each do |collection| %>
+<h1 class="headline"><%= @brand.name %></h1>
+<br/>
+<ul class="collection-list">
+  <% @collections.each do |collection| %>
   <h2>Collection: <%= link_to collection.name, collection %></h2>
   <div class="collection-top-toys">
     <% top_toys_collection = @top_toys.select { |toy| toy.collection_id == collection.id } %>
@@ -6,9 +9,9 @@
       <% top_toys_collection.each do |toy| %>
         <div class="toy-item-container">
           <%= image_tag toy.image, alt: "#{toy.name} Image", class: "toy-image" %>
-
         </div>
       <% end %>
     </div>
   </div>
 <% end %>
+</ul>
