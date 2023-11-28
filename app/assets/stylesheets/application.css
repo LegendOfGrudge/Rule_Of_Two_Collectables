@@ -26,6 +26,15 @@
   background: linear-gradient(to bottom, rgb(167, 109, 0), maroon);
  }
 
+ .headline-description {
+  text-align: center;
+  color: black;
+  background-color: rgb(120, 120, 120);
+  border-bottom: 1px solid #ccc;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+ }
+
  .line-item {
   display: flex;
   align-items: center;
