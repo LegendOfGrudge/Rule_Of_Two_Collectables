@@ -129,6 +129,33 @@
   text-align: right;
 }
 
+.nav-search form input[type="text"] {
+  width: 20vw;
+}
+
+.nav-search form input[type="text"]:focus {
+  border: 2px solid rgb(167, 109, 0);
+  outline: none; /* Remove the default focus outline, if desired */
+}
+
+.nav-search form input[type="submit"] {
+  display: inline-block;
+  margin-right: 5px;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(120, 120, 120);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+}
+
+/* Change styles on hover */
+.nav-search form input[type="submit"]:hover {
+  background-color: maroon;
+  color: black;
+}
+
 .brand-list ul {
   list-style-type: none;
   margin: 0;
