@@ -10,4 +10,5 @@ Rails.application.routes.draw do
 
   resources :brands
   resources :collections
+  resources :toys
 end

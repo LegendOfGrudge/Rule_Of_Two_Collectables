@@ -17,6 +17,13 @@
  body {
   margin: 0;
   padding: 0;
+  background-color: rgb(60, 60, 60);
+ }
+
+ .headline {
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to bottom, rgb(167, 109, 0), maroon);
  }
 
  .line-item {
@@ -25,7 +32,7 @@
   padding: 15px;
   border-bottom: 1px solid #ccc;
   border-radius: 25px;
-  background-color: rgb(162, 161, 161);
+  background-color: rgb(120, 120, 120);
 }
 
 .line-item img {
@@ -43,12 +50,18 @@
   font-weight: bold;
 }
 
+.name a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
 .description {
   color: #555;
 }
 
 .price {
-  color: #e44d26; /* Adjust the color as needed */
+  color: maroon; /* Adjust the color as needed */
   font-weight: bold;
 }
 
@@ -58,7 +71,7 @@
 
 /* Navigation Bar Styles */
 .nav_bar {
-  background-color: maroon;
+  background: linear-gradient(to bottom, black, maroon);
   margin: 0;
   padding: 0;
 }
@@ -117,12 +130,13 @@
 }
 
 .brand-list ul {
-  list-style: none;
+  list-style-type: none;
+  margin: 0;
   padding: 0;
 }
 
 .brand-list li {
-  background: linear-gradient(to right, black, red);
+  background: linear-gradient(to right, black, maroon);
   color: white; /* Set text color to contrast with the gradient */
   padding: 10px;
   margin: 5px;
@@ -138,12 +152,13 @@
 }
 
 .collection-list ul {
-  list-style: none;
+  list-style-type: none;
+  margin: 0;
   padding: 0;
 }
 
 .collection-list li {
-  background: linear-gradient(to right, black, orange);
+  background: linear-gradient(to right, black, rgb(167, 109, 0));
   color: white; /* Set text color to contrast with the gradient */
   padding: 10px;
   margin: 5px;
@@ -175,6 +190,7 @@
   box-sizing: border-box;
   border: 1px solid #ccc; /* Optional: Adding a border for visual separation */
   border-radius: 5px; /* Optional: Rounded corners for aesthetics */
+  background-color: rgb(120, 120, 120);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a slight elevation effect */
 }
 
@@ -183,3 +199,59 @@
   font-size: 16px;
 }
 
+.product-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: rgb(120, 120, 120);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.product-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-details {
+  border-top: 1px solid rgb(60, 60, 60);
+  border-bottom: 1px solid rgb(60, 60, 60);
+  color: rgb(60, 60, 60);
+}
+
+.product-detail-emphasis {
+  color: black;
+}
+
+.product-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.quantity-input {
+  width: 50px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.add-to-cart-btn {
+  background-color: #4caf50; /* Green color */
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #45a049; /* Darker green color on hover */
+}
