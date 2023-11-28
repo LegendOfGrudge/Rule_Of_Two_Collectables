@@ -140,7 +140,7 @@
 
 .nav-search form input[type="submit"] {
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 15px;
   text-decoration: none;
   color: black;
   background-color: rgb(120, 120, 120);
@@ -319,4 +319,25 @@
 
 .add-to-cart-btn:hover {
   background-color: #45a049; /* Darker green color on hover */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+footer a {
+  color: maroon;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
