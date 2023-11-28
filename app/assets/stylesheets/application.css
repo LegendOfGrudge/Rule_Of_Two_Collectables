@@ -273,80 +273,25 @@
   font-size: 16px;
 }
 
-.product-container {
-  max-width: 600px;
-  margin: 50px auto;
-  background-color: rgb(120, 120, 120);
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+/* Updated CSS */
+.collection-top-toys {
+  margin-bottom: 20px; /* Adjust margin as needed */
 }
 
-.product-image {
-  max-width: 100%;
+.horizontal-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px; /* Adjust as needed */
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.toy-item-container {
+  flex: 0 0 auto;
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+.toy-image {
+  max-width: 150px; /* Adjust image width as needed */
   height: auto;
-  border-radius: 5px;
-  margin-bottom: 20px;
 }
 
-.product-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.product-details {
-  border-top: 1px solid rgb(60, 60, 60);
-  border-bottom: 1px solid rgb(60, 60, 60);
-  color: rgb(60, 60, 60);
-}
-
-.product-detail-emphasis {
-  color: black;
-}
-
-.product-description {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.quantity-input {
-  width: 50px;
-  padding: 5px;
-  font-size: 16px;
-}
-
-.add-to-cart-btn {
-  background-color: #4caf50; /* Green color */
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.add-to-cart-btn:hover {
-  background-color: #45a049; /* Darker green color on hover */
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  margin-top: 20px;
-  border-top: 1px solid #ccc;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-footer a {
-  color: maroon;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
