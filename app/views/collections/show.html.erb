@@ -1,4 +1,5 @@
 <h1 class="headline"><%= @collection.name %></h1>
+<p class="headline-description"><%= @collection.description %></p>
 <br/>
 <% @toys.each do |toy| %>
   <% if toy.quantity > 95 %>
