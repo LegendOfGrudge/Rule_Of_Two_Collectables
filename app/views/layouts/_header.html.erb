@@ -1,0 +1,26 @@
+<div class="nav_bar">
+  <nav>
+    <ul class="nav-list">
+      <li><%= image_tag "Logo.png" %></li>
+      <li>
+        <div class="nav-search">
+          <%= form_tag search_path, method: :get do %>
+            <%= collection_select :collection, :id, @collections, :id, :name, { include_blank: 'All' }, { class: 'form-control' } %>
+            <%= text_field_tag :query, params[:query] %>
+            <%= submit_tag "Search" %>
+          <% end %>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <ul class="nav-list">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'About', about_path %></li>
+          <% @brands.each do |brand| %>
+            <li><%= link_to brand.name, brand %></li>
+          <% end %>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>

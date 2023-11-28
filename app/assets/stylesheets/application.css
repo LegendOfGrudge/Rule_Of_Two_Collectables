@@ -129,6 +129,42 @@
   text-align: right;
 }
 
+.nav-search form select {
+  margin-right: 5px;
+  padding: 5px;
+  color: black;
+  background-color: rgb(120, 120, 120);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.nav-search form input[type="text"] {
+  width: 20vw;
+}
+
+.nav-search form input[type="text"]:focus {
+  border: 2px solid rgb(167, 109, 0);
+  outline: none; /* Remove the default focus outline, if desired */
+}
+
+.nav-search form input[type="submit"] {
+  display: inline-block;
+  margin-right: 15px;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(120, 120, 120);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+}
+
+/* Change styles on hover */
+.nav-search form input[type="submit"]:hover {
+  background-color: maroon;
+  color: black;
+}
+
 .brand-list ul {
   list-style-type: none;
   margin: 0;
@@ -292,4 +328,25 @@
 
 .add-to-cart-btn:hover {
   background-color: #45a049; /* Darker green color on hover */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+footer a {
+  color: maroon;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

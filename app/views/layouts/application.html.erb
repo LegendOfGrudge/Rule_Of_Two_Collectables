@@ -11,21 +11,10 @@
   </head>
 
   <body>
-    <div class="nav_bar">
-      <nav>
+    <%= render partial: "layouts/header" %>
 
-      <ul class="nav-list">
-        <li><%= image_tag "Logo.png" %></li>
-        <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'About', about_path %></li>
-        <% @brands.each do |brand| %>
-          <li><%= link_to brand.name, brand %></li>
-        <% end %>
-        <li></li>
-      </ul>
-
-    </nav>
-  </div>
     <%= yield %>
+
+    <%= render partial: "layouts/footer" %>
   </body>
 </html>
