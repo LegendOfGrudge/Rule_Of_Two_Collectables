@@ -21,12 +21,14 @@
  }
 
  .headline {
+  margin-bottom: 0;
   text-align: center;
   color: #fff;
   background: linear-gradient(to bottom, rgb(167, 109, 0), maroon);
  }
 
  .headline-description {
+  margin-top: 0;
   text-align: center;
   color: black;
   background-color: rgb(120, 120, 120);
@@ -202,12 +204,13 @@
   padding: 0;
 }
 
-.collection-list li {
+.collection-list h2 {
   background: linear-gradient(to right, black, rgb(167, 109, 0));
-  color: white; /* Set text color to contrast with the gradient */
+  color: maroon; /* Set text color to contrast with the gradient */
   padding: 10px;
-  margin: 5px;
-  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  margin-bottom: 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .collection-list a {
@@ -280,6 +283,32 @@
 .collection-toy h3 {
   margin-bottom: 5px;
   font-size: 16px;
+}
+
+/* Updated CSS */
+.collection-top-toys {
+  margin-bottom: 20px; /* Adjust margin as needed */
+  background-color: rgb(120, 120, 120);
+  border-bottom: 1px solid #ccc;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.horizontal-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px; /* Adjust as needed */
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.toy-item-container {
+  flex: 0 0 auto;
+  margin: 0 auto; /* Adjust margin as needed */
+}
+
+.toy-image {
+  max-width: 150px; /* Adjust image width as needed */
+  height: auto;
 }
 
 .product-container {
