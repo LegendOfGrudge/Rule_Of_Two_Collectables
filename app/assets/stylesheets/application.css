@@ -223,6 +223,47 @@
   padding: 8px;
 }
 
+.sort-controls {
+  padding: 5px;
+  margin: 0px 30px;
+  width: 21vw;
+  background: linear-gradient(to bottom, rgb(167, 109, 0), maroon);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.sort-controls form label {
+  color: #fff;
+}
+
+.sort-controls form select {
+  margin-right: 5px;
+  padding: 5px;
+  color: black;
+  background-color: rgb(120, 120, 120);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.sort-controls form input[type="submit"] {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(120, 120, 120);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+}
+
+/* Change styles on hover */
+.sort-controls form input[type="submit"]:hover {
+  background-color: maroon;
+  color: black;
+}
+
 /* Assuming a generic pagination structure */
 .pagination-container {
   text-align: center;
