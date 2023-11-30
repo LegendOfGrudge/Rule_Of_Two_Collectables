@@ -1,6 +1,8 @@
 class CollectionsController < ApplicationController
   def index
     @collections = Collection.all
+
+    @collection = Collection.page(params[:page]).per(10)
   end
 
   def show
