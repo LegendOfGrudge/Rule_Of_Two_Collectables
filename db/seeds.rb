@@ -388,3 +388,4 @@ puts "Created #{Brand.count} Brands"
 puts "Created #{Collection.count} Collections"
 puts "Created #{ToyType.count} Toy Types"
 puts "Created #{Toy.count} Toys"
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

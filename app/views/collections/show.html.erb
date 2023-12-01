@@ -1,19 +1,21 @@
 <h1 class="headline"><%= @collection.name %></h1>
 <p class="headline-description"><%= @collection.description %></p>
 <br/>
-<%= form_tag collection_path(@collection), method: :get, id: 'sort-form' do %>
-  <label for="sort-by">Sort by:</label>
-  <%= select_tag 'sort_by', options_for_select({
-      'Alphabetical A to Z' => 'alphabetical_asc',
-      'Reverse Alphabetical Z to A' => 'alphabetical_desc',
-      'Price High to Low' => 'price_desc',
-      'Price Low to High' => 'price_asc',
-      'Quantity High to Low' => 'quantity_desc',
-      'Quantity Low to High' => 'quantity_asc'
-    }, params[:sort_by]), id: 'sort-by' %>
+<div class="sort-controls">
+  <%= form_tag collection_path(@collection), method: :get, id: 'sort-form' do %>
+    <label for="sort-by">Sort by:</label>
+    <%= select_tag 'sort_by', options_for_select({
+        'Alphabetical A to Z' => 'alphabetical_asc',
+        'Reverse Alphabetical Z to A' => 'alphabetical_desc',
+        'Price High to Low' => 'price_desc',
+        'Price Low to High' => 'price_asc',
+        'Quantity High to Low' => 'quantity_desc',
+        'Quantity Low to High' => 'quantity_asc'
+      }, params[:sort_by]), id: 'sort-by' %>
 
-  <%= submit_tag 'Sort', class: 'btn btn-primary' %>
-<% end %>
+    <%= submit_tag 'Sort', class: 'btn btn-primary' %>
+  <% end %>
+</div>
 <% @toys.each do |toy| %>
   <% if toy.quantity > 95 %>
     <div class="line-item">
