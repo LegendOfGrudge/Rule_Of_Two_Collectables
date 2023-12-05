@@ -1,3 +1,4 @@
+<div class="breadcrumbs"><%= link_to 'Home', root_path %> &gt; <%= link_to @toy.collection.brand.name, @toy.collection.brand %> &gt; <%= link_to @toy.collection.name, @toy.collection %></div>
 <h1 class="headline"><%= @toy.name %></h1>
 <% if @toy.quantity > 95 %>
   <div class="product-container">
