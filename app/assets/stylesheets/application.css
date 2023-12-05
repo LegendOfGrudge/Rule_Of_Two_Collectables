@@ -466,3 +466,12 @@ footer a:hover {
 .session-form h2 {
   color: maroon;
 }
+
+.field select {
+  margin-right: 5px;
+  padding: 5px;
+  color: black;
+  background-color: rgb(120, 120, 120);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
