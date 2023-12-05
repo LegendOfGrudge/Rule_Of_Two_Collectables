@@ -10,10 +10,14 @@ Rails.application.routes.draw do
   get '/home', to: 'home#index'
   get '/about', to: 'about#index'
   get '/search', to: 'search#search'
+  get '/cart', to: 'cart#index'
 
   resources :brands
   resources :collections
   resources :toys
+
+  post '/toys/add_to_cart/:id', to: 'toys#add_to_cart', as: 'add_to_cart'
+  delete '/toys/remove_from_cart/:id', to: 'toys#remove_from_cart', as: 'remove_from_cart'
 
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'

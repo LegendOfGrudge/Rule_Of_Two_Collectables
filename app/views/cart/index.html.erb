@@ -1,0 +1,31 @@
+<h1 class="headline">Shopping Cart</h1>
+<br/>
+<% @cart.each do |toy| %>
+  <% if toy.quantity > 95 %>
+    <div class="line-item">
+      <img src="<%= toy.image %>" alt="<%= toy.name %>">
+      <div class="line-item-details">
+        <div class="name"><%= link_to toy.name, toy %></div>
+        <div>
+          <p>Reqular Price: $<%= sprintf('%.2f', toy.price) %> Sale Price: <span class="price">$<%= sprintf('%.2f', toy.price * 0.9) %></span></p>
+          <label for="quantity">Quantity:</label>
+          <input class="quantity-input" type="number" id="quantity" name="quantity" value="1" min="1" max="<%= toy.quantity %>">
+        </div>
+      </div>
+      <%= button_to 'X', remove_from_cart_path(toy), method: :delete %>
+    </div>
+  <% else %>
+    <div class="line-item">
+      <img src="<%= toy.image %>" alt="<%= toy.name %>">
+      <div class="line-item-details">
+        <div class="name"><%= link_to toy.name, toy %></div>
+        <div>
+          <p>Price: <span class="price">$<%= sprintf('%.2f', toy.price) %></span></p>
+          <label for="quantity">Quantity:</label>
+          <input class="quantity-input" type="number" id="quantity" name="quantity" value="1" min="1" max="<%= toy.quantity %>">
+        </div>
+      </div>
+      <%= button_to 'X', remove_from_cart_path(toy), method: :delete %>
+    </div>
+  <% end %>
+<% end %>

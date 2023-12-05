@@ -13,7 +13,9 @@
     </div>
     <label for="quantity">Quantity:</label>
     <input class="quantity-input" type="number" id="quantity" name="quantity" value="1" min="1" max="<%= @toy.quantity %>">
-    <button class="add-to-cart-btn">Add to Cart</button>
+    <% if !@cart.include?(@toy) %>
+      <%= button_to 'Add to Cart', add_to_cart_path(@toy.id), {class: 'add-to-cart-btn'} %>
+    <% end %>
   </div>
 <% else %>
   <div class="product-container">
@@ -28,6 +30,8 @@
     </div>
     <label for="quantity">Quantity:</label>
     <input class="quantity-input" type="number" id="quantity" name="quantity" value="1" min="1" max="<%= @toy.quantity %>">
-    <button class="add-to-cart-btn">Add to Cart</button>
+    <% if !@cart.include?(@toy) %>
+      <%= button_to 'Add to Cart', add_to_cart_path(@toy.id), {class: 'add-to-cart-btn'} %>
+    <% end %>
   </div>
 <% end %>
