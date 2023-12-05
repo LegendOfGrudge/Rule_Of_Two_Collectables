@@ -10,6 +10,12 @@
     </div>
 
     <div class="field">
+      <%= f.label :address %><br />
+      <%= f.text_field :address %>
+      <%= f.collection_select :province_id, @user_provinces, :id, :abbr, { class: 'form-control' } %>
+    </div>
+
+    <div class="field">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
