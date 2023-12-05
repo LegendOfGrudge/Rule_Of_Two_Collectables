@@ -21,6 +21,14 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
  }
 
+ .notice {
+  color: yellow;
+ }
+
+ .alert {
+  color: red;
+ }
+
  .headline {
   margin-bottom: 0;
   text-align: center;
@@ -83,29 +91,35 @@
 }
 
 /* Navigation Bar Styles */
-.nav_bar {
-  background: linear-gradient(to bottom, black, maroon);
+.top-nav-bar {
+  background: linear-gradient(to bottom, grey, black);
   margin: 0;
   padding: 0;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nav_bar ul {
+.top-nav-bar ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav_bar li {
+.top-nav-bar li {
   display: inline;
   margin-right: 20px;
 }
 
-.nav_bar a {
+.top-nav-bar a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
   text-align: center;
   padding: 8px;
+}
+
+.nav-links {
+  margin-left: auto; /* Pushes nav-links to the right */
 }
 
 .nav-list {
@@ -135,6 +149,14 @@
   border: none;
   padding: 5px 10px;
   border-radius: 3px;
+}
+
+.bottom-nav-bar {
+  background: linear-gradient(to bottom, black, maroon);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .nav-search {
@@ -430,4 +452,26 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+.session-form {
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 25px;
+  background-color: rgb(120, 120, 120);
+  color: black;
+}
+
+.session-form h2 {
+  color: maroon;
+}
+
+.field select {
+  margin-right: 5px;
+  padding: 5px;
+  color: black;
+  background-color: rgb(120, 120, 120);
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
