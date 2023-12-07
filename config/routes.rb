@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/about', to: 'about#index'
   get '/search', to: 'search#search'
   get '/cart', to: 'cart#index'
+  get '/orders', to: 'orders#show'
 
   resources :brands
   resources :collections
@@ -19,6 +20,8 @@ Rails.application.routes.draw do
   post '/toys/add_to_cart/:id', to: 'toys#add_to_cart', as: 'add_to_cart'
   post '/toys/update_cart/:id', to: 'toys#update_cart', as: 'update_cart'
   delete '/toys/remove_from_cart/:id', to: 'toys#remove_from_cart', as: 'remove_from_cart'
+
+  post '/cart/create_order', to: 'cart#create_order', as: 'create_order'
 
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'

@@ -52,6 +52,7 @@
     <p>HST (<%= current_user.province.hst %>): <%= number_to_currency (subtotal * current_user.province.hst) %></p>
     <p>Grand Total: <%= number_to_currency (subtotal + (subtotal * current_user.province.gst) + (subtotal * current_user.province.pst) + (subtotal * current_user.province.hst)) %></p>
   </div>
+  <div class="cart-not-signed-in"><%= button_to 'Checkout', create_order_path, params: { subtotal: (subtotal * 100) } %></div>
 <% else %>
   <div class="order-price">
     <p>Subtotal: <%= number_to_currency subtotal %></p>
