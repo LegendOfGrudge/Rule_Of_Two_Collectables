@@ -11,7 +11,7 @@
         <div class="name"><%= link_to toy.name, toy %></div>
         <div>
           <p>Reqular Price: <%= number_to_currency toy.price %> Sale Price: <span class="price"><%= number_to_currency (toy.price * 0.9) %></span></p>
-          <%= form_tag update_cart_path(toy), method: :post do %>
+          <%= form_tag update_cart_path(toy), method: :post, class: 'cart-form' do %>
             <%= hidden_field_tag :id, toy.id %>
             <%= hidden_field_tag :price, (toy.price * 0.9) %>
             <%= label_tag :quantity, "Quantity:" %>
@@ -30,7 +30,7 @@
         <div class="name"><%= link_to toy.name, toy %></div>
         <div>
           <p>Price: <span class="price"><%= number_to_currency toy.price %></span></p>
-          <%= form_tag update_cart_path(toy), method: :post do %>
+          <%= form_tag update_cart_path(toy), method: :post, class: 'cart-form' do %>
             <%= hidden_field_tag :id, toy.id %>
             <%= hidden_field_tag :price, toy.price %>
             <%= label_tag :quantity, "Quantity:" %>
@@ -44,6 +44,17 @@
   <% end %>
 <% end %>
 <br/>
-<div class="order-price">
-  <p>Subtotal: <%= number_to_currency subtotal %></p>
-</div>
+<% if user_signed_in? %>
+  <div class="order-price">
+    <p>Subtotal: <%= number_to_currency subtotal %></p>
+    <p>GST (<%= current_user.province.gst %>): <%= number_to_currency (subtotal * current_user.province.gst) %></p>
+    <p>PST (<%= current_user.province.pst %>): <%= number_to_currency (subtotal * current_user.province.pst) %></p>
+    <p>HST (<%= current_user.province.hst %>): <%= number_to_currency (subtotal * current_user.province.hst) %></p>
+    <p>Grand Total: <%= number_to_currency (subtotal + (subtotal * current_user.province.gst) + (subtotal * current_user.province.pst) + (subtotal * current_user.province.hst)) %></p>
+  </div>
+<% else %>
+  <div class="order-price">
+    <p>Subtotal: <%= number_to_currency subtotal %></p>
+  </div>
+  <div class="cart-not-signed-in"><%= button_to 'Login', new_user_session_path %> or <%= button_to 'Sign Up', user_registration_path %></div>
+<% end %>

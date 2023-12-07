@@ -413,10 +413,17 @@
   margin-bottom: 20px;
 }
 
-.quantity-input {
-  width: 50px;
-  padding: 5px;
-  font-size: 16px;
+.cart-form {
+  display: flex;
+  align-items: center;
+}
+
+.cart-form label {
+  margin-right: 10px; /* Adjust as needed */
+}
+
+.cart-form input[type="number"] {
+  width: 3.5vw;
 }
 
 .add-to-cart-btn {
@@ -479,4 +486,32 @@ footer a:hover {
 .breadcrumbs {
   color: white;
   font-size: medium;
+}
+
+.order-price {
+  margin: 0px 10px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  color: white;
+  text-align: center;
+}
+
+.cart-not-signed-in {
+  color: white;
+  text-align: center;
+}
+
+.cart-not-signed-in form {
+  display: inline-block;
+  margin: 0px 10px; /* Adjust as needed to add space between buttons */
+}
+
+.cart-not-signed-in form:last-child {
+  margin-right: 0; /* Remove margin from the last form */
+}
+
+.cart-not-signed-in input[type="submit"] {
+  /* Add any additional styling you need for the buttons */
+  /* For example: */
+  padding: 10px;
 }
