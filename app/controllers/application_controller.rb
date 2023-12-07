@@ -2,7 +2,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :initialize_session
-  before_action :load_cart
   before_action :set_brands
   before_action :search_collections
   before_action :get_provinces
@@ -10,9 +9,6 @@ class ApplicationController < ActionController::Base
 
   def initialize_session
     session[:cart] ||= []
-  end
-  def load_cart
-    @cart = Toy.find(session[:cart])
   end
   def get_provinces
     @user_provinces = Province.all

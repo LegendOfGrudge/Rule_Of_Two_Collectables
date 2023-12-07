@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :toys
 
   post '/toys/add_to_cart/:id', to: 'toys#add_to_cart', as: 'add_to_cart'
+  post '/toys/update_cart/:id', to: 'toys#update_cart', as: 'update_cart'
   delete '/toys/remove_from_cart/:id', to: 'toys#remove_from_cart', as: 'remove_from_cart'
 
   devise_scope :user do
