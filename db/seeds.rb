@@ -13,6 +13,8 @@ ToyType.delete_all
 Collection.delete_all
 Brand.delete_all
 Province.delete_all
+Order.delete_all
+OrderProduct.delete_all
 
 Province.create(name: "Alberta", abbr: "AB", pst: 0, gst: 0.05, hst: 0)
 Province.create(name: "British Columbia", abbr: "BC", pst: 0.07, gst: 0.05, hst: 0)
@@ -27,6 +29,11 @@ Province.create(name: "Prince Edward Island", abbr: "PE", pst: 0, gst: 0, hst: 0
 Province.create(name: "Quebec", abbr: "QC", pst: 0.09975, gst: 0.05, hst: 0)
 Province.create(name: "Saskatchewan", abbr: "SK", pst: 0.06, gst: 0.05, hst: 0)
 Province.create(name: "Yukon", abbr: "YT", pst: 0, gst: 0.05, hst: 0)
+
+OrderStatus.create(name: "New")
+OrderStatus.create(name: "Paid")
+OrderStatus.create(name: "Shipped")
+OrderStatus.create(name: "Complete")
 
 ToyType.create(type_name: "Statue")
 toy_type = ToyType.create(type_name: "Action Figure")

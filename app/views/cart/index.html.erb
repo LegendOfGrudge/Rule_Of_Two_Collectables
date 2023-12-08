@@ -1,0 +1,67 @@
+<h1 class="headline">Shopping Cart</h1>
+<br/>
+<% subtotal = 0 %>
+<% session[:cart].each do |item| %>
+  <% toy = Toy.find(item[0]) %>
+  <% if toy.quantity > 95 %>
+    <% subtotal += item[2] * (toy.price * 0.9) %>
+    <div class="line-item">
+      <img src="<%= toy.image %>" alt="<%= toy.name %>">
+      <div class="line-item-details">
+        <div class="name"><%= link_to toy.name, toy %></div>
+        <div>
+          <p>Reqular Price: <%= number_to_currency toy.price %> Sale Price: <span class="price"><%= number_to_currency (toy.price * 0.9) %></span></p>
+          <%= form_tag update_cart_path(toy), method: :post, class: 'cart-form' do %>
+            <%= hidden_field_tag :id, toy.id %>
+            <%= hidden_field_tag :price, (toy.price * 0.9) %>
+            <%= label_tag :quantity, "Quantity:" %>
+            <%= number_field_tag :quantity, item[2], in: 1..toy.quantity %>
+            <%= submit_tag "Update" %>
+          <% end %>
+        </div>
+      </div>
+      <%= button_to 'X', remove_from_cart_path(toy), method: :delete %>
+    </div>
+  <% else %>
+    <% subtotal += item[2] * toy.price %>
+    <div class="line-item">
+      <img src="<%= toy.image %>" alt="<%= toy.name %>">
+      <div class="line-item-details">
+        <div class="name"><%= link_to toy.name, toy %></div>
+        <div>
+          <p>Price: <span class="price"><%= number_to_currency toy.price %></span></p>
+          <%= form_tag update_cart_path(toy), method: :post, class: 'cart-form' do %>
+            <%= hidden_field_tag :id, toy.id %>
+            <%= hidden_field_tag :price, toy.price %>
+            <%= label_tag :quantity, "Quantity:" %>
+            <%= number_field_tag :quantity, item[2], in: 1..toy.quantity %>
+            <%= submit_tag "Update" %>
+          <% end %>
+        </div>
+      </div>
+      <%= button_to 'X', remove_from_cart_path(toy), method: :delete %>
+    </div>
+  <% end %>
+<% end %>
+<br/>
+<% if user_signed_in? %>
+  <div class="order-price">
+    <p>Subtotal: <%= number_to_currency subtotal %></p>
+    <% if current_user.province.gst != 0 %>
+      <p>GST (<%= current_user.province.gst %>): <%= number_to_currency (subtotal * current_user.province.gst) %></p>
+    <% end %>
+    <% if current_user.province.pst != 0 %>
+      <p>PST (<%= current_user.province.pst %>): <%= number_to_currency (subtotal * current_user.province.pst) %></p>
+    <% end %>
+    <% if current_user.province.hst != 0 %>
+      <p>HST (<%= current_user.province.hst %>): <%= number_to_currency (subtotal * current_user.province.hst) %></p>
+    <% end %>
+    <p>Grand Total: <%= number_to_currency (subtotal + (subtotal * current_user.province.gst) + (subtotal * current_user.province.pst) + (subtotal * current_user.province.hst)) %></p>
+  </div>
+  <div class="cart-not-signed-in"><%= button_to 'Checkout', create_order_path, params: { subtotal: (subtotal * 100) } %></div>
+<% else %>
+  <div class="order-price">
+    <p>Subtotal: <%= number_to_currency subtotal %></p>
+  </div>
+  <div class="cart-not-signed-in"><%= button_to 'Login', new_user_session_path %> or <%= button_to 'Sign Up', user_registration_path %></div>
+<% end %>

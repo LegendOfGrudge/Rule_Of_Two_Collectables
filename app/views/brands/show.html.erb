@@ -1,18 +1,19 @@
+<div class="breadcrumbs"><%= link_to 'Home', root_path %></div>
 <h1 class="headline"><%= @brand.name %></h1>
 <p class="headline-description"><%= @brand.description %></p>
 <br/>
 <ul class="collection-list">
   <% @collections.each do |collection| %>
-  <h2>Collection: <%= link_to collection.name, collection %></h2>
-  <div class="collection-top-toys">
-    <% top_toys_collection = @top_toys.select { |toy| toy.collection_id == collection.id } %>
-    <div class="horizontal-scroll-container">
-      <% top_toys_collection.each do |toy| %>
-        <div class="toy-item-container">
-          <%= image_tag toy.image, alt: "#{toy.name} Image", class: "toy-image" %>
-        </div>
-      <% end %>
+    <h2>Collection: <%= link_to collection.name, collection %></h2>
+    <div class="collection-top-toys">
+      <% top_toys_collection = @top_toys.select { |toy| toy.collection_id == collection.id } %>
+      <div class="horizontal-scroll-container">
+        <% top_toys_collection.each do |toy| %>
+          <div class="toy-item-container">
+            <%= image_tag toy.image, alt: "#{toy.name} Image", class: "toy-image" %>
+          </div>
+        <% end %>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
 </ul>

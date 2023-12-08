@@ -1,0 +1,21 @@
+<% if @orders.empty? %>
+  <h1 class="headline">No Orders Available</h1>
+<% else %>
+  <% @orders.each do |order| %>
+    <h1 class="headline">Order #: <%= order.id %></h1>
+    <p class="headline-description">Total: <%= number_to_currency (order.order_subtotal + order.order_gst + order.order_pst + order.order_hst).to_f / 100 %> Status: <%= order.order_status.name %></p>
+    <% products = OrderProduct.all.where(order_id: order.id) %>
+    <% products.each do |product| %>
+      <div class="line-item">
+        <img src="<%= product.toy.image %>" alt="<%= product.toy.name %>">
+        <div class="line-item-details">
+          <div class="name"><%= link_to product.toy.name, product.toy %></div>
+          <div>
+            <p>Price: <span class="price"><%= number_to_currency product.product_cost.to_f / 100 %></span></p>
+            <p>Quantity: <span class="price"><%= product.product_quantity %></span></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

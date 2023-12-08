@@ -6,7 +6,7 @@
     <div class="line-item-details">
       <div class="name"><%= link_to toy.name, toy %></div>
       <div>
-        <p>Price: <span class="price">$<%= sprintf('%.2f', toy.price) %></span></p>
+        <p>Price: <span class="price"><%= number_to_currency toy.price %></span></p>
         <p>Quantity: <span class="price"><%= toy.quantity %></span></p>
       </div>
     </div>
@@ -23,7 +23,7 @@
     <div class="line-item-details">
       <div class="name"><%= link_to toy.name, toy %></div>
       <div>
-        <p>Reqular Price: $<%= sprintf('%.2f', toy.price) %> Sale Price: <span class="price">$<%= sprintf('%.2f', toy.price * 0.9) %></span></p>
+        <p>Reqular Price: <%= number_to_currency toy.price %> Sale Price: <span class="price"><%= number_to_currency (toy.price * 0.9) %></span></p>
         <p>Quantity: <span class="price"><%= toy.quantity %></span></p>
       </div>
     </div>

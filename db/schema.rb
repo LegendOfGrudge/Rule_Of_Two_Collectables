@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_05_040823) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_08_142248) do
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -51,6 +51,36 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_05_040823) do
     t.datetime "updated_at", null: false
     t.string "description"
     t.index ["brand_id"], name: "index_collections_on_brand_id"
+  end
+
+  create_table "order_products", force: :cascade do |t|
+    t.integer "toy_id", null: false
+    t.integer "order_id", null: false
+    t.integer "product_cost"
+    t.integer "product_quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_order_products_on_order_id"
+    t.index ["toy_id"], name: "index_order_products_on_toy_id"
+  end
+
+  create_table "order_statuses", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "order_subtotal"
+    t.integer "order_gst"
+    t.integer "order_pst"
+    t.integer "order_hst"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "order_status_id", null: false
+    t.index ["order_status_id"], name: "index_orders_on_order_status_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "provinces", force: :cascade do |t|
@@ -101,6 +131,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_05_040823) do
   end
 
   add_foreign_key "collections", "brands"
+  add_foreign_key "order_products", "orders"
+  add_foreign_key "order_products", "toys"
+  add_foreign_key "orders", "order_statuses"
+  add_foreign_key "orders", "users"
   add_foreign_key "toys", "collections"
   add_foreign_key "toys", "toy_types"
   add_foreign_key "users", "provinces"
