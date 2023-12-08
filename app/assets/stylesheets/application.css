@@ -25,6 +25,7 @@
   margin-bottom: 0;
   text-align: center;
   color: #fff;
+  text-shadow: 2px 2px #555;
   background: linear-gradient(to bottom, rgb(167, 109, 0), maroon);
  }
 
@@ -66,6 +67,8 @@
 .name a {
   text-decoration: none;
   color: #fff;
+  text-shadow: 2px 2px #555;
+  text-shadow: #555;
   font-weight: bold;
 }
 
@@ -103,6 +106,7 @@
 .nav_bar a {
   text-decoration: none;
   color: #fff;
+  text-shadow: 2px 2px #555;
   font-weight: bold;
   text-align: center;
   padding: 8px;
@@ -119,6 +123,7 @@
 .nav-list li {
   margin: 0 5px; /* Adjust margins as needed */
   color: #fff; /* Text color for navbar items */
+  text-shadow: 2px 2px #555;
 }
 
 /* Style the search input and button */
@@ -132,6 +137,7 @@
 .nav-list li input[type="submit"] {
   background-color: #007bff; /* Button background color */
   color: #fff; /* Button text color */
+  text-shadow: 2px 2px #555;
   border: none;
   padding: 5px 10px;
   border-radius: 3px;
@@ -187,6 +193,7 @@
 .brand-list li {
   background: linear-gradient(to right, black, maroon);
   color: white; /* Set text color to contrast with the gradient */
+  text-shadow: 2px 2px #555;
   padding: 10px;
   margin: 5px;
   border-radius: 5px; /* Optional: Add border-radius for rounded corners */
@@ -195,6 +202,7 @@
 .brand-list a {
   text-decoration: none;
   color: #fff;
+  text-shadow: 2px 2px #555;
   font-weight: bold;
   text-align: center;
   padding: 8px;
@@ -218,6 +226,7 @@
 .collection-list a {
   text-decoration: none;
   color: #fff;
+  text-shadow: 2px 2px #555;
   font-weight: bold;
   text-align: center;
   padding: 8px;
@@ -255,11 +264,13 @@
 .pagination a:hover {
   background-color: maroon;
   color: #fff;
+  text-shadow: 2px 2px #555;
 }
 
 .pagination .active a {
   background-color: rgb(60, 60, 60);
   color: #fff;
+  text-shadow: 2px 2px #555;
   border: 1px solid black;
 }
 
@@ -359,6 +370,7 @@
 .add-to-cart-btn {
   background-color: #4caf50; /* Green color */
   color: #fff;
+  text-shadow: 2px 2px #555;
   padding: 10px 20px;
   font-size: 18px;
   border: none;
@@ -373,6 +385,7 @@
 footer {
   background-color: #333;
   color: #fff;
+  text-shadow: 2px 2px #555;
   padding: 20px;
   text-align: center;
   margin-top: 20px;
@@ -390,3 +403,5 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+@import "bootstrap";
