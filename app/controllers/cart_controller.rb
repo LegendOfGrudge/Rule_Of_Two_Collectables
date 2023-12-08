@@ -7,7 +7,8 @@ class CartController < ApplicationController
     gst = subtotal * current_user.province.gst
     pst = subtotal * current_user.province.pst
     hst = subtotal * current_user.province.hst
-    order = Order.create(user: current_user, order_subtotal: subtotal, order_gst: gst, order_pst: pst, order_hst: hst, status: 'New')
+    status = OrderStatus.find_by(name: "New")
+    order = Order.create(user: current_user, order_subtotal: subtotal, order_gst: gst, order_pst: pst, order_hst: hst, order_status: status)
 
     session[:cart].each do |item|
       toy = Toy.find(item[0])

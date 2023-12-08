@@ -3,7 +3,7 @@
 <% else %>
   <% @orders.each do |order| %>
     <h1 class="headline">Order #: <%= order.id %></h1>
-    <p class="headline-description">Total: <%= number_to_currency (order.order_subtotal + order.order_gst + order.order_pst + order.order_hst).to_f / 100 %> Status: <%= order.status %></p>
+    <p class="headline-description">Total: <%= number_to_currency (order.order_subtotal + order.order_gst + order.order_pst + order.order_hst).to_f / 100 %> Status: <%= order.order_status.name %></p>
     <% products = OrderProduct.all.where(order_id: order.id) %>
     <% products.each do |product| %>
       <div class="line-item">
