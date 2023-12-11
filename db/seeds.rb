@@ -45,15 +45,15 @@ brands = JSON.parse(brands_json_data)
 brands.each do |brand_data|
   # Create the brand
   brand = Brand.create(
-    name:        brand_data[:name],
-    description: brand_data[:description]
+    name:        brand_data['name'],
+    description: brand_data['description']
   )
 
   brand_data['collections'].each do |collection_data|
     # Create the collection
     collection = Collection.create(
-      name:        collection_data[:name],
-      description: collection_data[:description],
+      name:        collection_data['name'],
+      description: collection_data['description'],
       brand:
     )
 
