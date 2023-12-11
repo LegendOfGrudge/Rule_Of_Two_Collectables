@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Alberta",
+    "abbr": "AB",
+    "gst": 0.05,
+    "pst": 0.0,
+    "hst": 0.0
+  },
+  {
+    "name": "British Columbia",
+    "abbr": "BC",
+    "gst": 0.05,
+    "pst": 0.07,
+    "hst": 0.0
+  },
+  {
+    "name": "Manitoba",
+    "abbr": "MB",
+    "gst": 0.05,
+    "pst": 0.07,
+    "hst": 0.0
+  },
+  {
+    "name": "New Brunswick",
+    "abbr": "NB",
+    "gst": 0.0,
+    "pst": 0.0,
+    "hst": 0.15
+  },
+  {
+    "name": "Newfoundland and Labrador",
+    "abbr": "NL",
+    "gst": 0.0,
+    "pst": 0.0,
+    "hst": 0.15
+  },
+  {
+    "name": "Nova Scotia",
+    "abbr": "NT",
+    "gst": 0.05,
+    "pst": 0.0,
+    "hst": 0.0
+  },
+  {
+    "name": "Northwest Territories",
+    "abbr": "NS",
+    "gst": 0.0,
+    "pst": 0.0,
+    "hst": 0.15
+  },
+  {
+    "name": "Nunavut",
+    "abbr": "NU",
+    "gst": 0.05,
+    "pst": 0.0,
+    "hst": 0.0
+  },
+  {
+    "name": "Ontario",
+    "abbr": "ON",
+    "gst": 0.0,
+    "pst": 0.0,
+    "hst": 0.13
+  },
+  {
+    "name": "Prince Edward Island",
+    "abbr": "PE",
+    "gst": 0.0,
+    "pst": 0.0,
+    "hst": 0.15
+  },
+  {
+    "name": "Quebec",
+    "abbr": "QC",
+    "gst": 0.05,
+    "pst": 0.09975,
+    "hst": 0.0
+  },
+  {
+    "name": "Saskatchewan",
+    "abbr": "SK",
+    "gst": 0.05,
+    "pst": 0.06,
+    "hst": 0.0
+  },
+  {
+    "name": "Yukon",
+    "abbr": "YT",
+    "gst": 0.05,
+    "pst": 0.0,
+    "hst": 0.0
+  }
+]
