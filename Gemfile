@@ -58,6 +58,9 @@ gem "sassc-rails"
 # Use Stripe for payment integration
 gem 'stripe'
 
+# Docker usage
+gem "dockerfile-rails", ">= 1.5", :group => :development
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
