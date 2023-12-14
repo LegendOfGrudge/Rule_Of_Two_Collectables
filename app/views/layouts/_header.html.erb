@@ -12,12 +12,20 @@
       </li>
       <li class="nav-login">
         <div>
-          <%= link_to "Cart: #{session[:cart].length}", cart_path %>
+          <%= link_to cart_path do %>
+            <i class="fa-solid fa-cart-shopping"></i>
+          <% end %>
           <% if user_signed_in? %>
-            <%= link_to "Welcome, #{current_user.name}", orders_path %>
-            <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+            <%= link_to orders_path do %>
+              <i class="fa-brands fa-first-order"></i>
+            <% end %>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fa-solid fa-door-open"></i>
+            <% end %>
           <% else %>
-            <%= link_to 'Login', new_user_session_path %>
+            <%= link_to new_user_session_path do %>
+              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            <% end %>
           <% end %>
         </div>
       </li>

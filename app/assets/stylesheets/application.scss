@@ -1,0 +1,534 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ */
+
+ $body-background-color: rgb(60, 60, 60);
+
+ body {
+   margin: 0;
+   padding: 0;
+   background-color: $body-background-color;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+ .notice {
+   color: yellow;
+ }
+
+ .alert {
+   color: red;
+ }
+
+ .headline {
+   margin-bottom: 0;
+   text-align: center;
+   color: #fff;
+   background: linear-gradient(to bottom, rgb(167, 109, 0), maroon);
+ }
+
+ .headline-description {
+   margin-top: 0;
+   padding: 10px 0px;
+   text-align: center;
+   color: black;
+   background-color: rgb(120, 120, 120);
+   border-bottom: 1px solid #ccc;
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+ }
+
+ .line-item {
+   display: flex;
+   align-items: center;
+   padding: 15px;
+   border-bottom: 1px solid #ccc;
+   border-radius: 25px;
+   background-color: rgb(120, 120, 120);
+ }
+
+ .line-item img {
+   width: 100px; /* Adjust the width as needed */
+   margin-right: 15px;
+   background-color: #ccc;
+ }
+
+ .line-item-details {
+   flex: 1;
+ }
+
+ .name {
+   font-size: 1.2em;
+   font-weight: bold;
+ }
+
+ .name a {
+   text-decoration: none;
+   color: #fff;
+   font-weight: bold;
+ }
+
+ .description {
+   color: #555;
+ }
+
+ .price {
+   color: maroon; /* Adjust the color as needed */
+   font-weight: bold;
+ }
+
+ .details {
+   display: flex;
+ }
+
+ /* Navigation Bar Styles */
+ .top-nav-bar {
+   background: linear-gradient(to bottom, grey, black);
+   margin: 0;
+   padding: 0;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .top-nav-bar ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
+
+ .top-nav-bar li {
+   display: inline;
+   margin-right: 20px;
+ }
+
+ .top-nav-bar a {
+   text-decoration: none;
+   color: #fff;
+   font-weight: bold;
+   text-align: center;
+   padding: 8px;
+ }
+
+ .nav-links {
+   margin-left: auto; /* Pushes nav-links to the right */
+ }
+
+ .nav-list {
+   list-style: none;
+   padding: 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between; /* Pushes elements to both ends of the navbar */
+ }
+
+ .nav-list li {
+   margin: 0 5px; /* Adjust margins as needed */
+   color: #fff; /* Text color for navbar items */
+ }
+
+ /* Style the search input and button */
+ .nav-list li input[type="text"] {
+   padding: 5px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+   margin-right: 5px; /* Adjust margin as needed */
+ }
+
+ .nav-list li input[type="submit"] {
+   background-color: #007bff; /* Button background color */
+   color: #fff; /* Button text color */
+   border: none;
+   padding: 5px 10px;
+   border-radius: 3px;
+ }
+
+ .bottom-nav-bar {
+   background: linear-gradient(to bottom, black, maroon);
+   margin: 0;
+   padding: 0;
+   display: flex;
+   align-items: center;
+ }
+
+ .nav-search {
+   width: 60vw;
+   text-align: right;
+ }
+
+ .nav-search form select {
+   margin-right: 5px;
+   padding: 5px;
+   color: black;
+   background-color: rgb(120, 120, 120);
+   border: 1px solid #ddd;
+   border-radius: 4px;
+ }
+
+ .nav-search form input[type="text"] {
+   width: 20vw;
+ }
+
+ .nav-search form input[type="text"]:focus {
+   border: 2px solid rgb(167, 109, 0);
+   outline: none; /* Remove the default focus outline, if desired */
+ }
+
+ .nav-search form input[type="submit"] {
+   display: inline-block;
+   margin-right: 15px;
+   text-decoration: none;
+   color: black;
+   background-color: rgb(120, 120, 120);
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   transition: background-color 0.3s, color 0.3s;
+   cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+ }
+
+ /* Change styles on hover */
+ .nav-search form input[type="submit"]:hover {
+   background-color: maroon;
+   color: black;
+ }
+
+ .brand-list ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+ }
+
+ .brand-list li {
+   background: linear-gradient(to right, black, maroon);
+   color: white; /* Set text color to contrast with the gradient */
+   padding: 10px;
+   margin: 5px;
+   border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+ }
+
+ .brand-list a {
+   text-decoration: none;
+   color: #fff;
+   font-weight: bold;
+   text-align: center;
+   padding: 8px;
+ }
+
+ .collection-list ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+ }
+
+ .collection-list h2 {
+   background: linear-gradient(to right, black, rgb(167, 109, 0));
+   color: maroon; /* Set text color to contrast with the gradient */
+   padding: 10px;
+   margin-bottom: 0;
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
+ }
+
+ .collection-list a {
+   text-decoration: none;
+   color: #fff;
+   font-weight: bold;
+   text-align: center;
+   padding: 8px;
+ }
+
+ .sort-controls {
+   padding: 5px;
+   margin: 0px 30px;
+   width: 21vw;
+   background: linear-gradient(to bottom, rgb(167, 109, 0), maroon);
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
+ }
+
+ .sort-controls form label {
+   color: #fff;
+ }
+
+ .sort-controls form select {
+   margin-right: 5px;
+   padding: 5px;
+   color: black;
+   background-color: rgb(120, 120, 120);
+   border: 1px solid #ddd;
+   border-radius: 4px;
+ }
+
+ .sort-controls form input[type="submit"] {
+   display: inline-block;
+   margin-right: 15px;
+   padding: 5px 10px;
+   text-decoration: none;
+   color: black;
+   background-color: rgb(120, 120, 120);
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   transition: background-color 0.3s, color 0.3s;
+   cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+ }
+
+ /* Change styles on hover */
+ .sort-controls form input[type="submit"]:hover {
+   background-color: maroon;
+   color: black;
+ }
+
+ /* Assuming a generic pagination structure */
+ .pagination-container {
+   text-align: center;
+   margin-top: 20px;
+ }
+
+ .pagination {
+   display: inline-block;
+   padding: 0;
+   margin: 0;
+ }
+
+ .pagination li {
+   display: inline;
+   margin: 0 4px;
+   list-style: none;
+ }
+
+ .pagination a {
+   display: inline-block;
+   padding: 8px 12px; /* Set a common size for enabled and disabled links */
+   text-decoration: none;
+   color: black;
+   background-color: rgb(120, 120, 120);
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   transition: background-color 0.3s, color 0.3s;
+ }
+
+ .pagination a:hover {
+   background-color: maroon;
+   color: #fff;
+ }
+
+ .pagination .active a {
+   background-color: rgb(60, 60, 60);
+   color: #fff;
+   border: 1px solid black;
+ }
+
+ .toy-images-container {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin-top: 20px;
+ }
+
+ .collection-toy {
+   text-align: center;
+   padding: 10px;
+   width: calc(33.33% - 20px); /* Adjust the width and padding as needed */
+   margin-bottom: 20px;
+   box-sizing: border-box;
+   border: 1px solid #ccc; /* Optional: Adding a border for visual separation */
+   border-radius: 5px; /* Optional: Rounded corners for aesthetics */
+   background-color: rgb(120, 120, 120);
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a slight elevation effect */
+ }
+
+ .collection-toy h3 {
+   margin-bottom: 5px;
+   font-size: 16px;
+ }
+
+ /* Updated CSS */
+ .collection-top-toys {
+   margin-bottom: 20px; /* Adjust margin as needed */
+   background-color: rgb(120, 120, 120);
+   border-bottom: 1px solid #ccc;
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+ }
+
+ .horizontal-scroll-container {
+   display: flex;
+   overflow-x: auto;
+   gap: 20px; /* Adjust as needed */
+   padding: 10px; /* Adjust padding as needed */
+ }
+
+ .toy-item-container {
+   flex: 0 0 auto;
+   margin: 0 auto; /* Adjust margin as needed */
+ }
+
+ .toy-image {
+   max-width: 150px; /* Adjust image width as needed */
+   height: auto;
+ }
+
+ .product-container {
+   max-width: 600px;
+   margin: 50px auto;
+   background-color: rgb(120, 120, 120);
+   padding: 20px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+ }
+
+ .product-image {
+   max-width: 100%;
+   height: auto;
+   border-radius: 5px;
+   margin-bottom: 20px;
+ }
+
+ .product-title {
+   font-size: 24px;
+   font-weight: bold;
+   margin-bottom: 10px;
+ }
+
+ .product-details {
+   border-top: 1px solid rgb(60, 60, 60);
+   border-bottom: 1px solid rgb(60, 60, 60);
+   color: rgb(60, 60, 60);
+ }
+
+ .product-detail-emphasis {
+   color: black;
+ }
+
+ .product-description {
+   font-size: 16px;
+   margin-bottom: 20px;
+ }
+
+ .cart-form {
+   display: flex;
+   align-items: center;
+ }
+
+ .cart-form label {
+   margin-right: 10px; /* Adjust as needed */
+ }
+
+ .cart-form input[type="number"] {
+   width: 3.5vw;
+ }
+
+ .add-to-cart-btn {
+   background-color: #4caf50; /* Green color */
+   color: #fff;
+   padding: 10px 20px;
+   font-size: 18px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+ }
+
+ .add-to-cart-btn:hover {
+   background-color: #45a049; /* Darker green color on hover */
+ }
+
+ footer {
+   background-color: #333;
+   color: #fff;
+   padding: 20px;
+   text-align: center;
+   margin-top: 20px;
+   border-top: 1px solid #ccc;
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
+ }
+
+ footer a {
+   color: maroon;
+   text-decoration: none;
+   margin: 0 10px;
+ }
+
+ footer a:hover {
+   text-decoration: underline;
+ }
+
+ .session-form {
+   align-items: center;
+   padding: 15px;
+   border-bottom: 1px solid #ccc;
+   border-radius: 25px;
+   background-color: rgb(120, 120, 120);
+   color: black;
+ }
+
+ .session-form h2 {
+   color: maroon;
+ }
+
+ .field select {
+   margin-right: 5px;
+   padding: 5px;
+   color: black;
+   background-color: rgb(120, 120, 120);
+   border: 1px solid #ddd;
+   border-radius: 4px;
+ }
+
+ .breadcrumbs {
+   color: white;
+   font-size: medium;
+ }
+
+ .order-price {
+   margin: 0px 10px;
+   border-top: 1px solid white;
+   border-bottom: 1px solid white;
+   color: white;
+   text-align: center;
+ }
+
+ .cart-not-signed-in {
+   color: white;
+   text-align: center;
+ }
+
+ .cart-not-signed-in form {
+   display: inline-block;
+   margin: 0px 10px; /* Adjust as needed to add space between buttons */
+ }
+
+ .cart-not-signed-in form:last-child {
+   margin-right: 0; /* Remove margin from the last form */
+ }
+
+ .cart-not-signed-in input[type="submit"] {
+   /* Add any additional styling you need for the buttons */
+   /* For example: */
+   padding: 10px;
+ }
+
+ // Media query for mobile screens
+ @media screen and (max-width: 767px) {
+  .bottom-nav-bar {
+    flex-direction: column; // Stack items vertically
+    text-align: center; // Center items in the column
+  }
+
+  .nav-search {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-list li {
+    margin: 0 1px; /* Adjust margins as needed */
+    color: #fff; /* Text color for navbar items */
+  }
+}
