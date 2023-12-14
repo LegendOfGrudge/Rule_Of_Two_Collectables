@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   delete '/toys/remove_from_cart/:id', to: 'toys#remove_from_cart', as: 'remove_from_cart'
 
   post '/cart/create_order', to: 'cart#create_order', as: 'create_order'
+  get "/cart/success", to: "cart#success", as: "cart_success"
+  get "/cart/cancel", to: "cart#cancel", as: "cart_cancel"
 
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'

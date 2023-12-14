@@ -7,6 +7,10 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <script src="https://js.stripe.com/v3"></script>
+    <script>
+      Stripe.setPublishableKey("pk_test_51ON05VHlrMMGKn8wSn9RGJUlgBcwNm67kgYHb2VZ7H0pm149v8B6H5HHGD42O054zVnUejWbxiYA9MDI7X9KjF9q000MJwRlWW");
+    </script>
     <%= javascript_importmap_tags %>
   </head>
 

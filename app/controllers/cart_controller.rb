@@ -3,6 +3,9 @@ class CartController < ApplicationController
   end
 
   def create_order
+    require 'stripe'
+    require 'json'
+
     subtotal = params[:subtotal].to_i
     gst = subtotal * current_user.province.gst
     pst = subtotal * current_user.province.pst
@@ -22,8 +25,55 @@ class CartController < ApplicationController
       toy.update(quantity: new_quantity)
     end
 
+    productlist = [{:price_data =>{ :currency => "cad", :product_data => {:name => "Order"}, :unit_amount => order.order_subtotal }, :quantity => 1}]
+    if (order.order_pst != 0)
+      productlist << {:price_data =>{ :currency => "cad", :product_data => {:name => "PST", :description => "Provincial Sales Tax"}, :unit_amount => order.order_pst }, :quantity => 1}
+    end
+    if (order.order_hst != 0)
+      productlist << {:price_data =>{ :currency => "cad", :product_data => {:name => "HST", :description => "Harmonized Sales Tax"}, :unit_amount => order.order_hst }, :quantity => 1}
+    end
+    if (order.order_gst != 0)
+      productlist << {:price_data =>{ :currency => "cad", :product_data => {:name => "GST", :description => "Federal Goods and Services Tax"}, :unit_amount => order.order_gst }, :quantity => 1}
+    end
+    json_data = productlist.as_json
+    puts json_data
+
     session[:cart] = []
 
-    redirect_to home_path
+    #Create Stripe session
+    @session = Stripe::Checkout::Session.create(
+      payment_method_types: ["card"],
+      success_url: cart_success_url + '?session_id={CHECKOUT_SESSION_ID}',
+      cancel_url: cart_cancel_url,
+      line_items: [json_data],
+      mode: 'payment',
+      phone_number_collection: {
+        "enabled": true
+      },
+      shipping_address_collection: {
+      allowed_countries: ['CA'],
+      },
+      billing_address_collection: "required",
+      ui_mode: 'hosted',
+
+    )
+
+    puts(@session.url)
+    redirect_to @session.url, allow_other_host: true
+  end
+
+  def success
+    session_id = params[:session_id]
+    order = Order.all.order(:created_at).last
+    orderStatus = OrderStatus.find_by(name: "Paid")
+
+    order.update(stripe_id: session_id.to_s)
+    order.update(order_status: orderStatus)
+
+    redirect_to root_path, allow_other_host:true
+  end
+
+  def cancel
+    redirect_to root_path, allow_other_host:true
   end
 end
