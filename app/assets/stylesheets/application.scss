@@ -150,6 +150,10 @@
    border-radius: 3px;
  }
 
+  .mobile-menu {
+    display: none;
+  }
+
  .bottom-nav-bar {
    background: linear-gradient(to bottom, black, maroon);
    margin: 0;
@@ -422,7 +426,7 @@
  }
 
  .cart-form input[type="number"] {
-   width: 3.5vw;
+   width: 30px;
  }
 
  .add-to-cart-btn {
@@ -517,9 +521,39 @@
 
  // Media query for mobile screens
  @media screen and (max-width: 767px) {
+  .nav-links .nav-list {
+    display: none; /* Hide the regular navigation links */
+  }
+
+  .mobile-menu {
+    display: block; /* Display the mobile menu */
+    cursor: pointer;
+  }
+
+  .nav-links.mobile-active .nav-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgb(120, 120, 120);
+    border: 1px solid white;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    width: 25%;
+    z-index: 1;
+  }
+
+  .nav-links.mobile-active .nav-list li {
+    margin-right: 0;
+  }
+
   .bottom-nav-bar {
     flex-direction: column; // Stack items vertically
     text-align: center; // Center items in the column
+  }
+
+  .logo-image {
+    max-width: 50%;
+    max-height: 50%;
   }
 
   .nav-search {

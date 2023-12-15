@@ -2,6 +2,7 @@
   <nav>
     <ul class="nav-list">
       <li class="nav-links">
+        <div class="mobile-menu">&#9776;</div> <!-- &#9776; is the Unicode for the hamburger icon -->
         <ul class="nav-list">
           <li><%= link_to 'Home', root_path %></li>
           <li><%= link_to 'About', about_path %></li>
@@ -34,7 +35,7 @@
 </div>
 
 <div class="bottom-nav-bar">
-  <%= image_tag "Logo.png" %>
+  <%= image_tag "Logo.png", { class: 'logo-image' } %>
   <div class="nav-search">
     <%= form_tag search_path, method: :get do %>
       <%= collection_select :collection, :id, @search_categories, :id, :name, { include_blank: 'All' }, { class: 'form-control' } %>
@@ -43,3 +44,10 @@
     <% end %>
   </div>
 </div>
+
+<script>
+  // Add JavaScript to toggle the mobile menu
+  document.querySelector('.mobile-menu').addEventListener('click', function () {
+    document.querySelector('.nav-links').classList.toggle('mobile-active');
+  });
+</script>
