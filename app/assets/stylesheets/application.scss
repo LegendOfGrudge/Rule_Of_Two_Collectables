@@ -168,8 +168,7 @@
  }
 
  .nav-search form select {
-   margin-right: 5px;
-   padding: 5px;
+   margin-right: 1px;
    color: black;
    background-color: rgb(120, 120, 120);
    border: 1px solid #ddd;
@@ -251,7 +250,7 @@
  .sort-controls {
    padding: 5px;
    margin: 0px 30px;
-   width: 21vw;
+   width: 317px;
    background: linear-gradient(to bottom, rgb(167, 109, 0), maroon);
    border-top-left-radius: 15px;
    border-top-right-radius: 15px;
@@ -489,6 +488,14 @@
  .breadcrumbs {
    color: white;
    font-size: medium;
+   background: linear-gradient(to bottom, maroon, black);
+   border: 1px solid maroon;
+   border-bottom-right-radius: 25px;
+   width: 275px;
+ }
+
+ .breadcrumbs a {
+  color: white;
  }
 
  .order-price {
