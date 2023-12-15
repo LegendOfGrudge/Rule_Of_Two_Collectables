@@ -35,7 +35,7 @@
 </div>
 
 <div class="bottom-nav-bar">
-  <%= image_tag "Logo.png", { class: 'logo-image' } %>
+  <%= image_tag "Logo.png", { class: 'logo-image', alt: 'Rule Of Two Collectables Logo' } %>
   <div class="nav-search">
     <%= form_tag search_path, method: :get do %>
       <%= collection_select :collection, :id, @search_categories, :id, :name, { include_blank: 'All' }, { class: 'form-control' } %>
